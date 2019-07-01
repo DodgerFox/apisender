@@ -1,0 +1,69 @@
+.popup
+  position fixed
+  top 0
+  right 0
+  left 0
+  bottom 0
+  background-color #ffffff
+  z-index 20
+  padding 40px 0
+  display none
+  overflow scroll
+
+  .wrap
+    height 100%
+
+  &-figures
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+    display flex
+    justify-content space-between
+    img
+      transform translateY(40px)
+      &:last-child
+        transform translateY(-40px)
+    +to-width(1200px)
+      display none
+
+  &-reg
+    height 100%
+    display flex
+    align-items center
+
+  &-close
+    position absolute
+    right 20px
+    top 80px
+    cursor pointer
+    top 20px
+    t()
+    &:hover
+      opacity 0.6
+
+    img
+      max-width 30px
+    +to-width(420px)
+      top 27px
+      img
+        max-width 23px
+
+  .registration
+    max-width 441px
+    width 100%
+    margin auto
+    box-shadow 0 1px 25px 2px rgba(194, 194, 194, 0.4)
+    &-title
+      font-size 26px
+      color #141414
+      font-weight 700
+      padding-bottom 20px
+      text-align center
+      +to-width(420px)
+        font-size 24px
+      + p
+        font-size 16px
+        text-align center
+        line-height 20px

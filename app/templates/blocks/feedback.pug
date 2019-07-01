@@ -1,0 +1,20 @@
+section.feedback
+  .wrap
+    h2.section-title Если вы не нашли ответов на вопросы, <br>обратитесь к нам, заполнив форму:
+    p.section-text Наши специалисты свяжутся с вами в ближайшее время
+    
+    .feedback-form
+      form.registration.form-feedback
+        input.registration__input(type="text" placeholder="Имя" required)
+        input.registration__input(type="text" placeholder="E-mail" required)
+        input.registration__input(type="text" placeholder="Ваш логин в системе" required)
+        input.registration__input(type="text" placeholder="Тема сообщения")
+        textarea.registration__textarea(placeholder="Текст сообщения" required)
+        
+      
+        .registration__btn
+          input(type="submit" value="Зарегистрироваться").registration__button
+    
+  .figures
+    img(src="assets/images/figures.svg").figures__item
+    img(src="assets/images/figures.svg").figures__item

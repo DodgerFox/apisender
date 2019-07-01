@@ -1,0 +1,77 @@
+.programs
+  padding-bottom 20px
+  .wrap
+    border-bottom 3px solid #e8e8e8
+    padding-bottom 100px
+
+  &-body
+    display flex
+    padding-top 70px
+    +to-width(640px)
+      flex-direction column
+      padding-top 40px
+
+  &-content
+    min-height 230px
+    +to-width(640px)
+      min-height inherit
+
+  img
+    margin-top 20px
+    max-width 100%
+    +to-width(640px)
+      max-width 300px
+
+  &-item
+    width 50%
+    padding-right 55px
+    border-right 1px solid #ffdfaf
+    &:last-child
+      padding-right 0
+      padding-left 55px
+      border-right none
+    +to-width(900px)
+      padding-right 30px
+      &:last-child
+        padding-left 30px
+    +to-width(640px)
+      width 100%
+      padding-bottom 40px
+      border-right none
+      border-bottom 1px solid #ffdfaf
+      margin-bottom 40px
+      &:last-child
+        padding-left 0
+        border none
+
+    &__title
+      color #141414
+      font-size 22px
+      font-weight 700
+      text-transform uppercase
+      line-height 30px
+      padding-bottom 50px
+      position relative
+      +to-width(900px)
+        font-size 20px
+      &:after
+        content ''
+        position absolute
+        background-color #fbb040
+        height 2px
+        width 100px
+        bottom 25px
+        left 0
+
+    p, ul li
+      font-size 16px
+      font-weight 500
+      line-height 22px
+      padding-bottom 20px
+
+  .registration__btn
+    max-width 330px
+    margin 0 auto
+    margin-top 50px
+    +to-width(640px)
+      margin-top 0

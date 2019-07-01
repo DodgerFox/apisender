@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+  	Options +FollowSymLinks
+ 	RewriteEngine On
+  	RewriteBase /
+
+  	#SSL FIX
+  	RewriteCond %{HTTP_HOST} ^(www.)?freesender.net$ [NC]
+  	RewriteCond %{HTTP:HTTPS} =on [NC]
+  	RewriteRule ^(.*)$ http://freesender.net/$1 [R=301,L]
+
+  	#WWW FIX
+	RewriteCond %{HTTP_HOST} ^www.freesender.net$ [NC]
+	RewriteRule ^(.*)$ http://freesender.net$1 [R=301,L]
+	
+	#INDEX FIX
+	RewriteCond %{THE_REQUEST} ^.*/index\.php 
+	RewriteRule ^(.*)index.php$ /$1 [R=301,L] 
+	RewriteCond %{THE_REQUEST} ^.*/index\.html 
+	RewriteRule ^(.*)index.html$ /$1 [R=301,L]
+</IfModule>

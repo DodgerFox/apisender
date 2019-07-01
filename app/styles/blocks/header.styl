@@ -1,0 +1,214 @@
+.header
+  position fixed
+  z-index 10
+  left 0
+  right 0
+  top 0
+  padding 10px 0
+  t()
+  &.fixed
+    padding 0
+    background white
+    box-shadow 0 1px 25px 2px rgba(155, 155, 155, 0.4)
+    .nav-list__item
+      font-weight 700
+      a
+        color #141414
+
+    &.white
+      opacity 1
+      pointer-events all
+      transform translateY(0)
+
+    .header__button
+      border-color #141414
+      color #141414
+      font-weight 700
+      &:hover
+        border-color #fbb040
+        color #fbb040
+
+    .header-gamburger__item
+      background-color #141414
+
+    .header-logo
+      img
+        opacity 0
+        &:last-child
+          opacity 1
+
+
+  .wrap
+    display flex
+    justify-content space-between
+    align-items center
+    height 100%
+
+  .white
+    background white
+    box-shadow 0 1px 25px 2px rgba(155, 155, 155, 0.4)
+    height 74px
+
+  &-logo
+    margin-bottom 4px
+    position relative
+    img
+      position relative
+      &:last-child
+        position absolute
+        left 0
+        top 0
+        opacity 0
+    +to-width(1100px)
+      img
+        max-width 130px
+
+  .wrap
+    padding-top 12px
+    padding-bottom 12px
+
+  &__button
+    color white
+    border 3px solid #ffffff
+    font-size 12px
+    font-weight 600
+    text-transform uppercase
+    padding 0 25px
+    height 34px
+    display flex
+    align-items center
+    justify-content center
+    cursor pointer
+    white-space nowrap
+    letter-spacing 0.5px
+    t()
+    &:hover
+      border-color #fbb040
+      color #fbb040
+    +to-width(992px)
+      margin-right 50px
+    +to-width(420px)
+      width 80px
+      height 30px
+      font-size 10px
+
+  .nav
+    height 74px
+    position relative
+    +to-width(992px)
+      position absolute
+      top -10px
+      right 0
+      height 100vh
+      width 320px
+      background-color white
+      padding 20px
+      padding-top 70px
+      transform translateX(100%)
+      border-left 1px solid #f0f0f0
+      t()
+
+    &.open
+      transform translateX(0%)
+    &-list
+      display flex
+      height 100%
+      +to-width(992px)
+        flex-direction column
+
+      &__item
+        font-size 12px
+        font-weight 700
+        letter-spacing 1px
+        text-transform uppercase
+        height 100%
+        display flex
+        align-items center
+        position relative
+        margin-right 24px
+
+
+        &:after
+          content ''
+          position absolute
+          bottom 0px
+          right 0
+          left 0
+          width 100%
+          height 4px
+          background-color #51d4ff
+          opacity 0
+          t()
+        &:hover
+          a
+            color #fbb040
+        &.active
+          a
+            color #fbb040
+          // &:after
+          //   opacity 1
+
+        &:last-child
+          margin-right 0
+        a
+          color #ffffff
+          height 100%
+          display flex
+          align-items center
+          t()
+        +to-width(1200px)
+          margin-right 20px
+        +to-width(1100px)
+          font-size 11px
+        +to-width(992px)
+          height 40px
+          width fit-content
+          font-weight 700
+          font-size 12px
+          a
+            color #141414
+
+
+
+
+  &-gamburger
+    position absolute
+    top 20px
+    right 30px
+    cursor pointer
+    width 24px
+    height 26px
+    display none
+    min-width 24px
+    +to-width(992px)
+      display block
+    +to-width(767px)
+      right 20px
+
+    &__item
+      position absolute
+      left 0
+      top 8px
+      height 2px
+      background-color white
+      right 0
+      transition 0.3s all
+      &:nth-child(2)
+        top 16px
+      &:last-child
+        top 24px
+
+    &.active
+      .header-gamburger__item
+        background-color #141414
+        &:nth-child(1)
+          transform rotate(-45deg)
+          top 18px
+        &:nth-child(2)
+          transform rotate(45deg)
+          top 18px
+        &:last-child
+          opacity 0
+
+    &:hover
+      cursor pointer

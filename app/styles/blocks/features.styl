@@ -1,0 +1,61 @@
+.features
+  position relative
+  overflow hidden
+  padding-bottom 10px
+  &-body
+    padding-top 50px
+    padding-bottom 70px
+    border-bottom 3px solid #e8e8e8
+    display flex
+    justify-content space-between
+    +to-width(992px)
+      flex-wrap wrap
+      justify-content center
+
+  .figures
+    +to-width(1600px)
+      display none
+
+  &-item
+    max-width 180px
+    +to-width(992px)
+      margin 0 10px
+      margin-bottom 30px
+    &:nth-child(2)
+      .features-item__icon
+        background-color #ffd4c0
+    &:nth-child(3)
+      .features-item__icon
+        background-color #95e4fe
+    &:nth-child(4)
+      .features-item__icon
+        background-color #d3bbff
+    &:nth-child(5)
+      .features-item__icon
+        background-color #ffb3c0
+
+    &__container
+      display flex
+      flex-direction column
+      align-items center
+
+    &__icon
+      background-color #92ffe4
+      max-width 150px
+      width 150px
+      height 150px
+      border-radius 50%
+      display flex
+      justify-content center
+      align-items center
+      +to-width(1200px)
+        width 110px
+        height 110px
+        img
+          max-width 50px
+    p
+      margin-top 10px
+      font-size 14px
+      text-align center
+      font-weight 700
+      line-height 20px

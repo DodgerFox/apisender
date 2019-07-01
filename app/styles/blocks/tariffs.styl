@@ -1,0 +1,51 @@
+.tariffs
+  padding-top 0
+  .wrap
+    border-top 3px solid #e8e8e8
+    padding-top 100px
+  &-table
+    margin 0 auto
+    width 100%
+    max-width 982px
+    margin-top 60px
+    box-shadow 0 1px 25px 2px rgba(194, 194, 194, 0.4)
+    font-size 18px
+    font-weight 500
+    color #141414
+    +to-width(800px)
+      font-size 16px
+    +to-width(640px)
+      font-size 12px
+      margin-top 40px
+    tr
+      &:nth-child(even)
+        background-color #ffcc80
+      th
+        height 55px
+        text-align left
+        font-weight 700
+        padding 0 5px
+      td
+        height 55px
+        padding 0 5px
+        &:first-child
+          padding-left 40px
+          font-weight 600
+          +to-width(800px)
+            padding-left 20px
+          +to-width(640px)
+            padding-left 10px
+        &:last-child
+          padding-right 40px
+          +to-width(800px)
+            padding-right 20px
+          +to-width(640px)
+            padding-right 10px
+
+        &.bold
+          font-weight 700
+
+  .registration__btn
+    max-width 330px
+    margin 0 auto
+    margin-top 50px

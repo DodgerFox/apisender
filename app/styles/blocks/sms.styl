@@ -1,0 +1,51 @@
+.sms
+  padding-bottom 40px
+  position relative
+  overflow hidden
+  .figures
+    +to-width(1600px)
+      display none
+  .wrap
+    border-bottom 3px solid #e8e8e8
+    padding-bottom 70px
+  &-list
+    max-width 800px
+    margin 0 auto
+    li
+      margin-top 40px
+      font-size 18px
+      font-weight 500
+      line-height 28px
+      padding-left 100px
+      position relative
+      padding-bottom 30px
+      +to-width(640px)
+        font-size 16px
+        padding-left 80px
+        padding-bottom 20px
+      &:before
+        content ''
+        position absolute
+        left 0
+        height 5px
+        width 62px
+        background-color #fbb040
+        top 60px
+      &:after
+        content '01.'
+        position absolute
+        left 0
+        top 12px
+        color #141414
+        font-size 42px
+        font-weight 600
+        line-height 24px
+      &:nth-child(2)
+        &:after
+          content '02.'
+      &:nth-child(3)
+        &:after
+          content '03.'
+      &:nth-child(4)
+        &:after
+          content '04.'

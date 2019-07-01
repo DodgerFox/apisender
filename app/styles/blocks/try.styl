@@ -1,0 +1,47 @@
+.try
+  position relative
+  overflow hidden
+  background-color #fbfbfb
+
+  .wrap
+    z-index 1
+
+  .figures
+    +to-width(1200px)
+      display none
+
+  .registration
+    box-shadow 0 1px 25px 2px rgba(194, 194, 194, 0.4)
+    padding 60px 50px
+    +to-width(460px)
+      padding 30px 25px
+
+  &-form
+    display flex
+    flex-direction column
+    margin-top 50px
+    align-items center
+    +to-width(420px)
+      margin-top 30px
+
+    .registration__btn
+      margin-top 20px
+
+  &-background
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+    &__ball
+      background-color #ffe9da
+      width 100%
+      max-width 1500px
+      height 100%
+      min-height 1500px
+      margin auto
+      top 100%
+      position relative
+      top -50%
+      transform translateY(10%)
+      border-radius 50%

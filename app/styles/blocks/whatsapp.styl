@@ -1,0 +1,33 @@
+.whatsapp
+  padding-bottom 30px
+  position relative
+  overflow hidden
+  .figures
+    +to-width(1600px)
+      display none
+  .wrap
+    border-bottom 3px solid #e8e8e8
+    padding-bottom 70px
+
+  &-mobile
+    +to-width(992px)
+      display none
+
+  &-body
+    display flex
+    justify-content space-between
+    max-width 1000px
+    margin 0 auto
+    margin-top 30px
+    +to-width(640px)
+      margin-top 0
+
+
+    .sms-list
+      max-width 800px
+      margin 0
+      margin-left 100px
+      +to-width(992px)
+        margin-left 70px
+      +to-width(540px)
+        margin-left 0
